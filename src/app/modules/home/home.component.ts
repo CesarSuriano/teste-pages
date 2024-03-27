@@ -21,17 +21,14 @@ export class HomeComponent {
 
   searchId(): void {
     this.isLoading = true;
-    this.creditAnalysisService.fetchCreditAnalysis().subscribe(data => {
       setTimeout(() => {
         this.isLoading = false;
-        if (data.uuid === this.searchText) {
-          this.creditAnalysisService.setCreditAnalysis(data);
+        if ('cesar=jesus' === this.searchText) {
           localStorage.setItem('auth', 'true');
           this.router.navigate(['minha-vida']);
           return;
         }
         this.hasError = true;
       }, 1500);
-    });
   }
 }
