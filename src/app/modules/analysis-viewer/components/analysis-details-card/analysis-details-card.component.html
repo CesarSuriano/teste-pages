@@ -1,0 +1,43 @@
+<p-card class="w-full xl:w-4/12 flex flex-col z-50 m-auto">
+  <app-card-label label="Mensagem do criador" />
+  <div class="flex-col">
+    <p class="text-base font-poppins-regular text-gray-600 mb-2">
+      A primeira coisa que você, meu filho, deve estar pensando é:<span class="font-poppins-bold"> desde quando
+      o César está envolvido nisso?</span> E a resposta é: desde o dia em que a Amanda
+      entrou em contato comigo pelo insta. “Ah, mas então toda aquela história
+      de você não saber o que ela queria era fake? (Lukaku pensando)”. Não! Na
+      verdade, eu quase estraguei tudo te mandando o print da solicitação, já
+      que só fui ver que ela tinha me mandado uma mensagem à noite, quando
+      cheguei da academia e já havia te falado tudo.
+    </p>
+    <p class="text-base font-poppins-regular text-gray-600 mb-2">
+      Esclarecido isso, vem a dúvida do César: se foi a Amanda quem te chamou
+      para o acampamento e você sabia que havia uma surpresa, como é que em
+      nenhum momento você desconfiou disso? Só penso em duas respostas, ou você
+      não queria estragar a surpresa ou você é extremamente burro, e por
+      questões de educação, prefiro não emitir minha opinião.
+    </p>
+    <p class="text-base font-poppins-regular text-gray-600 mb-2">
+      Agora, o assunto mais importante. Você foi até este acampamento de
+      “jovens” buscando se conectar com Jesus, e o que você encontra? <span class="font-poppins-bold">Um
+      depoimento escrito por César. </span>Como o César poderia participar de um evento
+      desses, logo ele, um homem tão sem fé? A resposta é simples, meu caro:
+      Jesus e eu somos um só, chega de duvidar, chega de raspar a barba para se
+      conectar comigo, chega de ir para acampamentos de 500 reais, chega de se
+      achar jovem. Jesus sempre esteve mais próximo do que você imaginava,
+      então, a partir de hoje, não tenha vergonha de me chamar de Pai.
+    </p>
+    <p class="text-base font-poppins-regular text-gray-600 mb-2">
+      Ahh, uma última coisa. Essa foi a primeira e única vez que o pai dedicou o tempo dele a algo do tipo, então, por favor, não participe mais dessas coisas de jovens, <span class="font-poppins-bold">VOCÊ NÃO É JOVEM!!!</span>
+    </p>
+    <p class="text-base font-poppins-regular text-gray-600 mb-6">
+      Após essa linda mensagem escrita 1 dia antes do prazo final para eu
+      entregar essa surpresa, fique com uma singela nostalgia dos grandes
+      momentos da sua vida, <span class="font-poppins-bold">basta clicar no botão abaixo.</span>
+    </p>
+    <button type="button" pButton (click)="openModal()"
+        class="bg-blue-600 hover:!bg-blue-800 border-none !text-center w-full"><span class="w-full text-center font-poppins-bold">Minha vida até aqui</span></button>
+  </div>
+</p-card>
+
+<app-documents-card *ngIf="isOpen" (close)="onCloseClick()"/>

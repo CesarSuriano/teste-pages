@@ -1,0 +1,31 @@
+<section id="home" class="flex flex-col items-center justify-center xl:flex-row px-6 md:px-14 2xl:px-32 h-screen relative">
+  <img src="assets/images/jesus.jpg" class="absolute w-full h-full object-cover opacity-50" alt="">
+  <div id="search" class="w-full 2xl:w-2/4 mt-8 2xl:m-auto p-10 !bg-white z-50 rounded-xl">
+    <h1
+      class="font-poppins-bold text-xl md:text-3xl xl:text-[50px] 2xl:text-[65px] text-center xl:text-left xl:leading-tight mb-4 fadeInUp">
+      <span class="font-poppins-light">
+        Bem-vindo(a) ao
+      </span>
+      <br>
+      Paraíso
+    </h1>
+    <p
+      class="font-poppins-regular text-gray-600 text-center xl:text-left text-sm md:text-lg xl:text-[20px] 2xl:text-[30px] xl:leading-normal mb-6 fadeInUp">
+      Relembre os melhores momentos da sua vida e receba uma mensagem do criador.
+    </p>
+    <div class="p-inputgroup fadeInUp">
+      <input type="password" [(ngModel)]="searchText" pInputText class="p-inputtext-lg !text-xs lg:!text-xl" (keydown.enter)="searchId()"
+        placeholder="Digite a senha do paraíso" autofocus>
+      <button type="button" pButton pRipple icon="" [loading]="isLoading" (click)="searchId()"
+        class="bg-blue-600 hover:!bg-blue-800 border-none !w-16 text-center"><span class="block" *ngIf="!isLoading">Entrar</span></button>
+    </div>
+    <div *ngIf="hasError" class="text-red-600">
+      <h3 class="text-sm xl:text-lg font-poppins-bold mt-5 mb-2">Oops!</h3>
+      <p class="text-sm xl:text-lg font-poppins-regular leading-normal">
+        Você não pode entrar no paraíso
+        <br>
+        Entre em contato com o criador para obter seu acesso.
+      </p>
+    </div>
+  </div>
+</section>
